@@ -12,9 +12,7 @@ Copyright 2008-2011 by Clifford A. Shaffer
 public class LDictionary<Key, E> implements ADTDictionary<Key, E> {
 	
 	private static final int defaultSize = 100; // Default size
-	
 
-	
 	//private LList<Key> klist; 
 	//private DList<E> vlist; 
 	
@@ -42,9 +40,7 @@ public class LDictionary<Key, E> implements ADTDictionary<Key, E> {
 		klist.clear(); 
 		vlist.clear();
 	}
-	
-	
-	
+		
 	public E find(Key k) {
 		// Reserve the current position of the lists
 		int currKeyPos = klist.currPos();
@@ -63,8 +59,7 @@ public class LDictionary<Key, E> implements ADTDictionary<Key, E> {
 				vlist.moveToPos(currValPos);
 				
 				return value;
-		    }
-		    	
+		    }    	
 		    
 		}   	
 		klist.moveToPos(currKeyPos);
@@ -156,17 +151,11 @@ public class LDictionary<Key, E> implements ADTDictionary<Key, E> {
 			return null;
 	}
 	
-
-	
-	
 	/** @return dictionary item size */
 	public int size() { 
 		return klist.length(); 
 	}
 	
-	
-	
-
 	/** @return string representation of each item <key, value> per line or by tab space; */
 	public String toString() {
 		int origin = klist.currPos();

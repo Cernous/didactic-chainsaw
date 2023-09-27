@@ -1,6 +1,6 @@
 package Assignment1;
 
-
+import javax.naming.ldap.SortKey;
 
 public class InventoryRecord implements Comparable<InventoryRecord>, ADTInventoryRecord{
 	private String	sku; 
@@ -10,6 +10,17 @@ public class InventoryRecord implements Comparable<InventoryRecord>, ADTInventor
 	private String	unit;
 	private long	qty;
 	private double  invetoryValue;
+
+	public InventoryRecord(String SKU, String DESC, String BIN, String LOC, String UNIT, long QTY, double VALUE){
+		this.sku = SKU;
+		this.description = DESC;
+		this.bin = BIN;
+		this.location = LOC;
+		this.unit = UNIT;
+		this.qty = QTY;
+		this.invetoryValue = VALUE;
+	}
+
 	public String getSku() {
 		return sku;
 	}
