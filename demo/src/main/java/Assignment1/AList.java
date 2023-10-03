@@ -88,8 +88,6 @@ public class AList<E> implements ADTList<E> {
 		
 	}
 
-	
-	
 	public E getValue(int pos) {
 		assert (curr>=0) && (curr<listSize) : "No current element";
 		assert (pos>=0) && (pos<listSize) : "Invalid position";

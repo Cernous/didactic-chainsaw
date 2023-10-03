@@ -13,7 +13,7 @@ public class WarehouseJUnitTest {
 	  
 	@BeforeAll
 	public static void setUp() {
-		dict = new LDictionary<Integer, String>(10);
+		dict = new DLDictionary<Integer, String>(10);
 		//dict = new LDictionary<String, InventoryRecord>(10);
 		
 	}

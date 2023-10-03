@@ -9,7 +9,7 @@ Copyright 2008-2011 by Clifford A. Shaffer
 
 
 /** Dictionary implemented by unsorted array-based list. */
-public class LDictionary<Key, E> implements ADTDictionary<Key, E> {
+public class DLDictionary<Key, E> implements ADTDictionary<Key, E> {
 	
 	private static final int defaultSize = 100; // Default size
 	
@@ -19,17 +19,17 @@ public class LDictionary<Key, E> implements ADTDictionary<Key, E> {
 	//private int[] index = null; 
 
 	/** Constructors */
-	LDictionary() { 
+	DLDictionary() { 
 		this(defaultSize); 
 	}
 	
-	LDictionary(int sz){ 
+	DLDictionary(int sz){ 
 		// Key values can use any List Data Types (AList, LList, DList) does not matter
-		//klist = new LList<Key>(sz);
+		klist = new DList<Key>(sz);
 		// Values: only recommend LList or DList because big O is better for insert 
-		//vlist = new LList<E>(sz);
-		klist = new AList<Key>(sz);
-		vlist = new AList<E>(sz); 
+		vlist = new DList<E>(sz);
+		//klist = new AList<Key>(sz);
+		//vlist = new AList<E>(sz); 
 	}
 	
 	/** Reinitialize */
